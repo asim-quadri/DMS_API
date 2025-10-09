@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\KrushnaMohanta_NDA_COMPSEQR360.docx.pdf",
+      "PackagePath": "staticwebassets\\UploadedFiles\\KrushnaMohanta_NDA_COMPSEQR360.docx.pdf"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Screenshot 2023-12-03 164443.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\Screenshot 2023-12-03 164443.png"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Screenshot 2023-12-03 164456.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\Screenshot 2023-12-03 164456.png"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Sep21 DG bakup Reading.xls",
+      "PackagePath": "staticwebassets\\UploadedFiles\\Sep21 DG bakup Reading.xls"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Support.ico",
+      "PackagePath": "staticwebassets\\UploadedFiles\\Support.ico"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Warranty.ico",
+      "PackagePath": "staticwebassets\\UploadedFiles\\Warranty.ico"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\file.txt",
+      "PackagePath": "staticwebassets\\UploadedFiles\\file.txt"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\kitchen.jpg"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen2.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\kitchen2.jpg"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen4.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\kitchen4.jpg"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen7.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\kitchen7.jpg"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\krushna mohanta   Resume.pdf",
+      "PackagePath": "staticwebassets\\UploadedFiles\\krushna mohanta   Resume.pdf"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\pig.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\pig.png"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\resumekrushna.pdf",
+      "PackagePath": "staticwebassets\\UploadedFiles\\resumekrushna.pdf"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\sample.pdf",
+      "PackagePath": "staticwebassets\\UploadedFiles\\sample.pdf"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\sign.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\sign.jpg"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\watchlist.1.jpg",
+      "PackagePath": "staticwebassets\\UploadedFiles\\watchlist.1.jpg"
+    },
+    {
+      "Id": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\watchlist.png",
+      "PackagePath": "staticwebassets\\UploadedFiles\\watchlist.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DmsApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.DmsApi.props",
+      "PackagePath": "build\\DmsApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.DmsApi.props",
+      "PackagePath": "buildMultiTargeting\\DmsApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.DmsApi.props",
+      "PackagePath": "buildTransitive\\DmsApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
