@@ -8,6 +8,7 @@ namespace DmsApi.Repository
     {
         IDbConnection ConnectionFactory();
         ISqlContext ContextFactory();
+        SqlConnection Getconnection();
     }
     public class UnitOfWork:IUnitOfWork
     {
@@ -25,6 +26,11 @@ namespace DmsApi.Repository
             return connection;
         }
 
+        public SqlConnection Getconnection()
+        {
+            var connection = new SqlConnection(_connection);
+            return connection;
+        }
         public ISqlContext ContextFactory()
         {
             var connection = ConnectionFactory();

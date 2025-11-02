@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\DmsApi.csproj": {}
+    "E:\\DMS_API\\DmsApi.csproj": {}
   },
   "projects": {
-    "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\DmsApi.csproj": {
+    "E:\\DMS_API\\DmsApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\DmsApi.csproj",
+        "projectUniqueName": "E:\\DMS_API\\DmsApi.csproj",
         "projectName": "DmsApi",
-        "projectPath": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\DmsApi.csproj",
-        "packagesPath": "C:\\Users\\krush\\.nuget\\packages\\",
-        "outputPath": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\obj\\",
+        "projectPath": "E:\\DMS_API\\DmsApi.csproj",
+        "packagesPath": "C:\\Users\\ikonos\\.nuget\\packages\\",
+        "outputPath": "E:\\DMS_API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\krush\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ikonos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -76,6 +86,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -84,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

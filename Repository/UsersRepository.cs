@@ -3,6 +3,7 @@ using DmsApi.Helpers;
 using DmsApi.Models;
 using Dapper;
 using Microsoft.AspNetCore.Http.HttpResults;
+using System.Data;
 
 
 namespace DmsApi.Repository
@@ -57,15 +58,36 @@ namespace DmsApi.Repository
 
         }
 
+
         public async Task<User> PostUser(PostUser user)
         {
-            using (var sqlContext = _unitOfWork.ContextFactory())
+            using (var sqlContext = _unitOfWork.Getconnection())
             {
-                user.Password = "123";
-                var mul = await sqlContext.Connection.QueryFirstAsync<User>("USP_POSTUSER", user, commandType: System.Data.CommandType.StoredProcedure, transaction: sqlContext.Transaction).ConfigureAwait(false);
-                sqlContext.Commit();
-                
-                return mul;
+                var postUser = user;
+                var parameters = new
+                {
+                    postUser.Id,
+                    postUser.EmpId,
+                    postUser.FirstName,
+                    postUser.LastName,
+                    postUser.FullName,
+                    postUser.Email,
+                    postUser.Mobile,
+                    Password="123",
+                    StartDate = postUser.StartDate?.ToString("yyyy-MM-dd HH:mm:ss"),
+                    EndDate = postUser.EndDate?.ToString("yyyy-MM-dd HH:mm:ss"),
+                    postUser.ManagerId,
+                    postUser.CreatedBy,
+                    Status=0,
+                    postUser.UID
+                };
+
+                var result = await sqlContext.QueryFirstOrDefaultAsync<User>(
+                    "USP_POSTUSER",
+                    parameters,
+                    commandType: CommandType.StoredProcedure
+                ); 
+               return result;
             }
         }
 
