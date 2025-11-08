@@ -1,4 +1,4 @@
-﻿namespace DmsApi.Models
+﻿namespace ComplianceAPI.Models
 {
     public class RegulationGroupModel: Response
     {
@@ -12,6 +12,7 @@
         public long? CountryRegulationGroupMappingId { get; set; }
         public string? ApprovalStatus { get; set; }
         public string? FullName { get; set; }
+        public string? ApprovedBy { get; set; }
         public int? StatusId { get; set; }
         public string? Status { get; set; }
         public string? Type { get; set; }
@@ -20,6 +21,7 @@
         public int? ModifiedBy { get; set; }
         public DateTime? ModifiedOn { get; set; }
         public Guid? UID { get; set; }
+        public string? RegulationGroupReferenceCode { get; set; }
 
     }
 }

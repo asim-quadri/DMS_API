@@ -1,16 +1,14 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public interface IUnitOfWork
     {
         IDbConnection ConnectionFactory();
         ISqlContext ContextFactory();
-        SqlConnection Getconnection();
     }
-    public class UnitOfWork:IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly string _connection;
 
@@ -26,11 +24,6 @@ namespace DmsApi.Repository
             return connection;
         }
 
-        public SqlConnection Getconnection()
-        {
-            var connection = new SqlConnection(_connection);
-            return connection;
-        }
         public ISqlContext ContextFactory()
         {
             var connection = ConnectionFactory();

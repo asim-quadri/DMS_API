@@ -1,326 +1,640 @@
 {
   "Version": 1,
-  "Hash": "0W7znrjl3ppIaSxrsKSGEdaGFWl/soxDXqHXQTT8D1s=",
-  "Source": "DmsApi",
-  "BasePath": "_content/DmsApi",
+  "Hash": "UEWq9SS/DopyzowHOY9qredLr20u6zZQHDqftCUMg1g=",
+  "Source": "ComplianceAPI",
+  "BasePath": "_content/ComplianceAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "DmsApi\\wwwroot",
-      "Source": "DmsApi",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
+      "Name": "ComplianceAPI\\wwwroot",
+      "Source": "ComplianceAPI",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\file.txt",
-      "SourceId": "DmsApi",
+      "Identity": "E:\\DMS_API\\wwwroot\\UploadedFiles\\4842869621.pdf",
+      "SourceId": "ComplianceAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/file.txt",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
+      "RelativePath": "UploadedFiles/4842869621#[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "9lxsx1gsa1",
+      "Integrity": "Df6qzYOF9vIociLQh7iua9pev4M7tuXMhIJYxXwx+aY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\file.txt"
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\4842869621.pdf"
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen.jpg",
-      "SourceId": "DmsApi",
+      "Identity": "E:\\DMS_API\\wwwroot\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx",
+      "SourceId": "ComplianceAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/kitchen.jpg",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
+      "RelativePath": "UploadedFiles/All_Candidates_Report_export_1761821355001#[.{fingerprint}]?.xlsx",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "w7mx9qcwlv",
+      "Integrity": "vP9w1yOncZYPh5GBS1M9d+33/aJapps5GA/WIsI1ly8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\kitchen.jpg"
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx"
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen2.jpg",
-      "SourceId": "DmsApi",
+      "Identity": "E:\\DMS_API\\wwwroot\\UploadedFiles\\file-sample_100kB.doc",
+      "SourceId": "ComplianceAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/kitchen2.jpg",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
+      "RelativePath": "UploadedFiles/file-sample_100kB#[.{fingerprint}]?.doc",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "x1g4afdwmu",
+      "Integrity": "ReB89iPmNLlrPoKur37MdO/QOgWAi/Hrac7vip330TU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\kitchen2.jpg"
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\file-sample_100kB.doc"
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen4.jpg",
-      "SourceId": "DmsApi",
+      "Identity": "E:\\DMS_API\\wwwroot\\UploadedFiles\\login.jpg",
+      "SourceId": "ComplianceAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/kitchen4.jpg",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
+      "RelativePath": "UploadedFiles/login#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "0yapol9tqi",
+      "Integrity": "WKBQjW+xU0GhqsmP5r1nIxCZGEjmVADkQvMa7Pv3ls4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\kitchen4.jpg"
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\login.jpg"
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\kitchen7.jpg",
-      "SourceId": "DmsApi",
+      "Identity": "E:\\DMS_API\\wwwroot\\UploadedFiles\\quotexprompt.txt",
+      "SourceId": "ComplianceAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/kitchen7.jpg",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
+      "RelativePath": "UploadedFiles/quotexprompt#[.{fingerprint}]?.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "3yab9sdhvq",
+      "Integrity": "1Upa/r8k6hPwm2EAySMkp2dnRC73x1dnq+0KbsG6IjA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\kitchen7.jpg"
+      "OriginalItemSpec": "wwwroot\\UploadedFiles\\quotexprompt.txt"
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\krushna mohanta   Resume.pdf",
-      "SourceId": "DmsApi",
+      "Identity": "E:\\DMS_API\\wwwroot\\UploadedFiles\\sample.pdf",
+      "SourceId": "ComplianceAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/krushna mohanta   Resume.pdf",
+      "ContentRoot": "E:\\DMS_API\\wwwroot\\",
+      "BasePath": "_content/ComplianceAPI",
+      "RelativePath": "UploadedFiles/sample#[.{fingerprint}]?.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\krushna mohanta   Resume.pdf"
-    },
-    {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\KrushnaMohanta_NDA_COMPSEQR360.docx.pdf",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/KrushnaMohanta_NDA_COMPSEQR360.docx.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\KrushnaMohanta_NDA_COMPSEQR360.docx.pdf"
-    },
-    {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\pig.png",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/pig.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\pig.png"
-    },
-    {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\resumekrushna.pdf",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/resumekrushna.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\resumekrushna.pdf"
-    },
-    {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\sample.pdf",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/sample.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
+      "Fingerprint": "icuyzvvc66",
+      "Integrity": "Ip3vuwzubwJnOlzeKQ0Gc+daDcMc7EOYnIqypOyn4bs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\UploadedFiles\\sample.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "UploadedFiles/4842869621.9lxsx1gsa1.pdf",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\4842869621.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "317993"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Df6qzYOF9vIociLQh7iua9pev4M7tuXMhIJYxXwx+aY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:10:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9lxsx1gsa1"
+        },
+        {
+          "Name": "label",
+          "Value": "UploadedFiles/4842869621.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Df6qzYOF9vIociLQh7iua9pev4M7tuXMhIJYxXwx+aY="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Screenshot 2023-12-03 164443.png",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/Screenshot 2023-12-03 164443.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\Screenshot 2023-12-03 164443.png"
+      "Route": "UploadedFiles/4842869621.pdf",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\4842869621.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "317993"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Df6qzYOF9vIociLQh7iua9pev4M7tuXMhIJYxXwx+aY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:10:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Df6qzYOF9vIociLQh7iua9pev4M7tuXMhIJYxXwx+aY="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Screenshot 2023-12-03 164456.png",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/Screenshot 2023-12-03 164456.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\Screenshot 2023-12-03 164456.png"
+      "Route": "UploadedFiles/All_Candidates_Report_export_1761821355001.w7mx9qcwlv.xlsx",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vP9w1yOncZYPh5GBS1M9d+33/aJapps5GA/WIsI1ly8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 04:58:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w7mx9qcwlv"
+        },
+        {
+          "Name": "label",
+          "Value": "UploadedFiles/All_Candidates_Report_export_1761821355001.xlsx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vP9w1yOncZYPh5GBS1M9d+33/aJapps5GA/WIsI1ly8="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Sep21 DG bakup Reading.xls",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/Sep21 DG bakup Reading.xls",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\Sep21 DG bakup Reading.xls"
+      "Route": "UploadedFiles/All_Candidates_Report_export_1761821355001.xlsx",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19319"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vP9w1yOncZYPh5GBS1M9d+33/aJapps5GA/WIsI1ly8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 04:58:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vP9w1yOncZYPh5GBS1M9d+33/aJapps5GA/WIsI1ly8="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\sign.jpg",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/sign.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\sign.jpg"
+      "Route": "UploadedFiles/file-sample_100kB.doc",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\file-sample_100kB.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ReB89iPmNLlrPoKur37MdO/QOgWAi/Hrac7vip330TU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:24:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ReB89iPmNLlrPoKur37MdO/QOgWAi/Hrac7vip330TU="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Support.ico",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/Support.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\Support.ico"
+      "Route": "UploadedFiles/file-sample_100kB.x1g4afdwmu.doc",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\file-sample_100kB.doc",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100352"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/msword"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ReB89iPmNLlrPoKur37MdO/QOgWAi/Hrac7vip330TU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:24:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1g4afdwmu"
+        },
+        {
+          "Name": "label",
+          "Value": "UploadedFiles/file-sample_100kB.doc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ReB89iPmNLlrPoKur37MdO/QOgWAi/Hrac7vip330TU="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\Warranty.ico",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/Warranty.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\Warranty.ico"
+      "Route": "UploadedFiles/login.0yapol9tqi.jpg",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WKBQjW+xU0GhqsmP5r1nIxCZGEjmVADkQvMa7Pv3ls4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0yapol9tqi"
+        },
+        {
+          "Name": "label",
+          "Value": "UploadedFiles/login.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WKBQjW+xU0GhqsmP5r1nIxCZGEjmVADkQvMa7Pv3ls4="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\watchlist.1.jpg",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/watchlist.1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\watchlist.1.jpg"
+      "Route": "UploadedFiles/login.jpg",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\login.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WKBQjW+xU0GhqsmP5r1nIxCZGEjmVADkQvMa7Pv3ls4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WKBQjW+xU0GhqsmP5r1nIxCZGEjmVADkQvMa7Pv3ls4="
+        }
+      ]
     },
     {
-      "Identity": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\UploadedFiles\\watchlist.png",
-      "SourceId": "DmsApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Freelancing\\API\\Dms-Api\\Dms-Api\\wwwroot\\",
-      "BasePath": "_content/DmsApi",
-      "RelativePath": "UploadedFiles/watchlist.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\UploadedFiles\\watchlist.png"
+      "Route": "UploadedFiles/quotexprompt.3yab9sdhvq.txt",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\quotexprompt.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36001"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Upa/r8k6hPwm2EAySMkp2dnRC73x1dnq+0KbsG6IjA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:11:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3yab9sdhvq"
+        },
+        {
+          "Name": "label",
+          "Value": "UploadedFiles/quotexprompt.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Upa/r8k6hPwm2EAySMkp2dnRC73x1dnq+0KbsG6IjA="
+        }
+      ]
+    },
+    {
+      "Route": "UploadedFiles/quotexprompt.txt",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\quotexprompt.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36001"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1Upa/r8k6hPwm2EAySMkp2dnRC73x1dnq+0KbsG6IjA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:11:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1Upa/r8k6hPwm2EAySMkp2dnRC73x1dnq+0KbsG6IjA="
+        }
+      ]
+    },
+    {
+      "Route": "UploadedFiles/sample.icuyzvvc66.pdf",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\sample.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ip3vuwzubwJnOlzeKQ0Gc+daDcMc7EOYnIqypOyn4bs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:24:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "icuyzvvc66"
+        },
+        {
+          "Name": "label",
+          "Value": "UploadedFiles/sample.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ip3vuwzubwJnOlzeKQ0Gc+daDcMc7EOYnIqypOyn4bs="
+        }
+      ]
+    },
+    {
+      "Route": "UploadedFiles/sample.pdf",
+      "AssetFile": "E:\\DMS_API\\wwwroot\\UploadedFiles\\sample.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18810"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ip3vuwzubwJnOlzeKQ0Gc+daDcMc7EOYnIqypOyn4bs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Nov 2025 07:24:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ip3vuwzubwJnOlzeKQ0Gc+daDcMc7EOYnIqypOyn4bs="
+        }
+      ]
     }
   ]
 }

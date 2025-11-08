@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public interface ISqlContext: IDisposable
     {
@@ -24,7 +24,7 @@ namespace DmsApi.Repository
             Connection = connection;
         }
 
-        public IDbConnection Connection { get; private set; }
+        public IDbConnection Connection { get; set; }
 
         public IDbTransaction Transaction { get; private set; } = null;
 

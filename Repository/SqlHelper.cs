@@ -1,6 +1,6 @@
 using Dapper;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public interface ISqlHelperRepository
     {

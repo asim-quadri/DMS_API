@@ -1,8 +1,8 @@
 ﻿using Dapper;
-using DmsApi.Models;
-using DmsApi.Services;
+using ComplianceAPI.Models;
+using ComplianceAPI.Services;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public interface IFolderService
     {
@@ -10,7 +10,7 @@ namespace DmsApi.Repository
             Task<List<Folder>> GetFoldersListByEntity(int entityId);
             Task<bool> DeleteFolder( int folderId);
 
-            Task<List<FolderTreeNode>> GetFolderTreeAsync(int intityId, int userId);
+            Task<List<FolderTreeNode>> GetFolderTreeAsync(int intityId, int userId, string type);
     }
 
     public class FolderService : IFolderService
@@ -31,9 +31,9 @@ namespace DmsApi.Repository
             return await  _folderRepository.GetFoldersListByEntity(entityId);
         }
 
-        public async Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId, int userId)
+        public async Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId, int userId,string type)
         {
-            return await _folderRepository.GetFolderTreeAsync(entityId,userId);
+            return await _folderRepository.GetFolderTreeAsync(entityId,userId,type);
         }
 
         public Task<bool> DeleteFolder(int folderId)

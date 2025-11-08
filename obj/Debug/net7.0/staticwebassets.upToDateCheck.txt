@@ -1,0 +1,6 @@
+wwwroot\UploadedFiles\4842869621.pdf
+wwwroot\UploadedFiles\All_Candidates_Report_export_1761821355001.xlsx
+wwwroot\UploadedFiles\file-sample_100kB.doc
+wwwroot\UploadedFiles\login.jpg
+wwwroot\UploadedFiles\quotexprompt.txt
+wwwroot\UploadedFiles\sample.pdf

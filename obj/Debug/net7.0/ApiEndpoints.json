@@ -1,0 +1,4778 @@
+[
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "AddUserOrganization",
+    "RelativePath": "api/Access/AddUserOrganization",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "models",
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.UsersOrganizations, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "AddUserRegulationMapping",
+    "RelativePath": "api/Access/AddUserRegulationMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ComplianceAPI.Models.PostUserRegulationMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "GetAccess",
+    "RelativePath": "api/Access/GetAccess/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "GetAllProductApproval",
+    "RelativePath": "api/Access/GetAllProductApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "GetMenuOptions",
+    "RelativePath": "api/Access/GetMenuOptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "GetMenuOptionsForParent",
+    "RelativePath": "api/Access/GetMenuOptionsForParent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentMenuId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "GetUserAccess",
+    "RelativePath": "api/Access/GetUserAccess",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "GetUserRegulationMappingDetails",
+    "RelativePath": "api/Access/GetUserRegulationMappingDetails/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "PostApproveAccess",
+    "RelativePath": "api/Access/PostApproveAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "PostRejectAccess",
+    "RelativePath": "api/Access/PostRejectAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "PostUserManagement",
+    "RelativePath": "api/Access/PostUserManagement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.AccessModel, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AccessController",
+    "Method": "SetUserAccess",
+    "RelativePath": "api/Access/SetUserAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accessRequests",
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.SetAccessRequest, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "AddAnnouncementDetails",
+    "RelativePath": "api/Announcement/AddAnnouncementDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "announcement",
+        "Type": "ComplianceAPI.Models.Announcement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "ApproveAnnouncement",
+    "RelativePath": "api/Announcement/ApproveAnnouncement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "GetAnnouncements",
+    "RelativePath": "api/Announcement/GetAllAnnouncement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ruleType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "GetAnnouncementDetails",
+    "RelativePath": "api/Announcement/GetAnnouncementDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "GetHistoryAnnouncement",
+    "RelativePath": "api/Announcement/GetHistoryAnnouncement/{UID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "GetNextAnnouncementsReference",
+    "RelativePath": "api/Announcement/GetNextAnnouncementsReferenceCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "GetPendingAnnouncementApproval",
+    "RelativePath": "api/Announcement/GetPendingAnnouncementApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.AnnouncementController",
+    "Method": "RejectAnnouncement",
+    "RelativePath": "api/Announcement/RejectAnnouncement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetAllBillingFrequency",
+    "RelativePath": "api/BillingDetails/GetAllBillingFrequency",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetAllBillingLevel",
+    "RelativePath": "api/BillingDetails/GetAllBillingLevel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetAllBillStatus",
+    "RelativePath": "api/BillingDetails/GetAllBillStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetAllDeliveryStatus",
+    "RelativePath": "api/BillingDetails/GetAllDeliveryStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetAllServiceProvider",
+    "RelativePath": "api/BillingDetails/GetAllServiceProvider",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetBillingDetailsByEntityAsync",
+    "RelativePath": "api/BillingDetails/GetBillingDetailsByEntityAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.DataModels.BillingDetails, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetBillingDetailsView",
+    "RelativePath": "api/BillingDetails/GetBillingDetailsView",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "billingDetailId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "GetBillingDetailsViewByOrgId",
+    "RelativePath": "api/BillingDetails/GetBillingDetailsViewByOrgId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "organizationId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "PostBillingApprove",
+    "RelativePath": "api/BillingDetails/PostBillingApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "PostBillingDetails",
+    "RelativePath": "api/BillingDetails/PostBillingDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "billingDetails",
+        "Type": "ComplianceAPI.Models.DataModels.PostBillingDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "PostBillingForward",
+    "RelativePath": "api/BillingDetails/PostBillingForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.BillingDetailsController",
+    "Method": "PostBillingReject",
+    "RelativePath": "api/BillingDetails/PostBillingReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetAllCompliances",
+    "RelativePath": "api/ComplianceTracker/GetAllCompliances",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetAllRegulationGroups",
+    "RelativePath": "api/ComplianceTracker/GetAllRegulationGroups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetCompliancesByRegulationSetupId",
+    "RelativePath": "api/ComplianceTracker/GetCompliancesByRegulationSetupId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulationSetupId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetEntities",
+    "RelativePath": "api/ComplianceTracker/GetEntities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetEntityById",
+    "RelativePath": "api/ComplianceTracker/GetEntityById/{EntityId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EntityId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetRegComplianceDetails",
+    "RelativePath": "api/ComplianceTracker/GetRegComplianceDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetRegComplianceDetailsByEntityId",
+    "RelativePath": "api/ComplianceTracker/GetRegComplianceDetailsByEntityId/{EntityId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EntityId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetTOCListByComplianceId",
+    "RelativePath": "api/ComplianceTracker/GetTOCListByComplianceId/{ComplianceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ComplianceId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "GetTOCListByRegulationId",
+    "RelativePath": "api/ComplianceTracker/GetTOCListByRegulationId/{RegulationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RegulationId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ComplianceTrackerController",
+    "Method": "PostComplianceTracker",
+    "RelativePath": "api/ComplianceTracker/PostComplianceTracker",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compliance",
+        "Type": "ComplianceAPI.Models.ComplianceTracker",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "GetAllConcernedMinistry",
+    "RelativePath": "api/ConcernedMinistry/GetAllConcernedMinistry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.ConcernedMinistry, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "GetAllConcernedMinistryMapping",
+    "RelativePath": "api/ConcernedMinistry/GetAllConcernedMinistryMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.CountryConcernedMinistryMapping, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "GetAllPendingConcernedMinistry",
+    "RelativePath": "api/ConcernedMinistry/GetAllPendingConcernedMinistry/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.PostConcernedMinistry, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "GetAllPendingConcernedMinistryMapping",
+    "RelativePath": "api/ConcernedMinistry/GetAllPendingConcernedMinistryMapping/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.CountryConcernedMinistryMapping, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "GetConcernedMinistryListCountry",
+    "RelativePath": "api/ConcernedMinistry/GetConcernedMinistryListCountry/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.ConcernedMinistry, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "GetNextConcernedMinistryRefCode",
+    "RelativePath": "api/ConcernedMinistry/GetNextConcernedMinistryRefCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "PostConcernedMinistry",
+    "RelativePath": "api/ConcernedMinistry/PostConcernedMinistry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postConcernedMinistry",
+        "Type": "ComplianceAPI.Models.PostConcernedMinistry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "PostCountryConcernedMinistryMapping",
+    "RelativePath": "api/ConcernedMinistry/PostCountryConcernedMinistryMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryConcernedMinistry",
+        "Type": "ComplianceAPI.Models.CountryConcernedMinistryMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "SubmitConcernedMinistriesApprove",
+    "RelativePath": "api/ConcernedMinistry/SubmitConcernedMinistriesApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postConcernedMinistry",
+        "Type": "ComplianceAPI.Models.PostConcernedMinistry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ConcernedMinistryController",
+    "Method": "SubmitConcernedMinistriesMappingApprove",
+    "RelativePath": "api/ConcernedMinistry/SubmitConcernedMinistriesMappingApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryConcernedMinistry",
+        "Type": "ComplianceAPI.Models.CountryConcernedMinistryMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "DeleteCountryStateMapping",
+    "RelativePath": "api/Country/DeleteCountryStateMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "ComplianceAPI.Models.CountryStateMappingModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetAllCountries",
+    "RelativePath": "api/Country/GetAllCountries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetAllCountriesFromJsonFile",
+    "RelativePath": "api/Country/GetAllCountriesFromJsonFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetAllCountryMaster",
+    "RelativePath": "api/Country/GetAllCountryMaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetAllCountryStateApproval",
+    "RelativePath": "api/Country/GetAllCountryStateApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetAllCountryStateMappingApproval",
+    "RelativePath": "api/Country/GetAllCountryStateMappingApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetAllCurrencyCodes",
+    "RelativePath": "api/Country/GetAllCurrencyCodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetCountryByOrgId",
+    "RelativePath": "api/Country/GetCountryByOrgId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetCountryByUID",
+    "RelativePath": "api/Country/GetCountryByUID/{uid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetCountryStateApproval",
+    "RelativePath": "api/Country/GetCountryStateApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetCountryStateMapping",
+    "RelativePath": "api/Country/GetCountryStateMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetCountryStateMappingApproval",
+    "RelativePath": "api/Country/GetCountryStateMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetLastCountryReferenceCode",
+    "RelativePath": "api/Country/GetLastCountryIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetLastStateReferenceCode",
+    "RelativePath": "api/Country/GetLastStateIndex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetNextCountryCode",
+    "RelativePath": "api/Country/GetNextCountryCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetNextStateCode",
+    "RelativePath": "api/Country/GetNextStateCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetServiceReqAndBillingDetails",
+    "RelativePath": "api/Country/GetServiceReqAndBillingDetails/{userId}/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetServiceReqAndBillingDetailsByState",
+    "RelativePath": "api/Country/GetServiceReqAndBillingDetailsByState/{userId}/{stateId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "stateId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetStateById",
+    "RelativePath": "api/Country/GetStateById/{CountryId}/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CountryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetStatesByCountry",
+    "RelativePath": "api/Country/GetStates/{CountryCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CountryCode",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "GetUserStateMapping",
+    "RelativePath": "api/Country/GetUserStateMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountry",
+    "RelativePath": "api/Country/PostCountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "ComplianceAPI.Models.Country",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryApprove",
+    "RelativePath": "api/Country/PostCountryApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryForward",
+    "RelativePath": "api/Country/PostCountryForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryReject",
+    "RelativePath": "api/Country/PostCountryReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryStateMappingApprove",
+    "RelativePath": "api/Country/PostCountryStateApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryStateMappingForward",
+    "RelativePath": "api/Country/PostCountryStateForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryStateMapping",
+    "RelativePath": "api/Country/PostCountryStateMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "ComplianceAPI.Models.CountryStateMappingModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostCountryStateMappingReject",
+    "RelativePath": "api/Country/PostCountryStateReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostState",
+    "RelativePath": "api/Country/PostState",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "states",
+        "Type": "ComplianceAPI.Models.States",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostStateApprove",
+    "RelativePath": "api/Country/PostStateApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostStateForward",
+    "RelativePath": "api/Country/PostStateForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostStateReject",
+    "RelativePath": "api/Country/PostStateReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostUserCountryMapping",
+    "RelativePath": "api/Country/PostUserCountryMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCountryMappings",
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.UserCountryMappingModel, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.CountryController",
+    "Method": "PostUserStateMapping",
+    "RelativePath": "api/Country/PostUserStateMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userStates",
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.UserStateMappingModel, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetAllEntitiesByOrgId",
+    "RelativePath": "api/Entity/GetAllEntitiesByOrgId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orgId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetEntitiesByOrganizationAndCountryId",
+    "RelativePath": "api/Entity/GetEntitiesByOrganizationAndCountryId/{organizationId}/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "organizationId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Response",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetEntitiesByOrganizationId",
+    "RelativePath": "api/Entity/GetEntitiesByOrganizationId/{organizationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "organizationId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Response",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetClientEntitiesLocations",
+    "RelativePath": "api/Entity/GetEntitiesLocations/{organizationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "organizationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetEntityApprovalList",
+    "RelativePath": "api/Entity/GetEntityApprovalList/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetEntityDetails",
+    "RelativePath": "api/Entity/GetEntityDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetEntityView",
+    "RelativePath": "api/Entity/GetEntityView",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "GetStartAndEndMonthsByCountryId",
+    "RelativePath": "api/Entity/GetStartAndEndMonthsByCountryId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "PostEntity",
+    "RelativePath": "api/Entity/PostEntity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "ComplianceAPI.Models.PostEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "PostEntityApprove",
+    "RelativePath": "api/Entity/PostEntityApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "PostEntityForward",
+    "RelativePath": "api/Entity/PostEntityForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityController",
+    "Method": "PostEntityReject",
+    "RelativePath": "api/Entity/PostEntityReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetAllCountryEntityTypeMappingApproval",
+    "RelativePath": "api/EntityType/GetAllCountryEntityTypeMappingApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetAllEntityTypeApprovalList",
+    "RelativePath": "api/EntityType/GetAllEntityTypeApprovalList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetAllEntityTypes",
+    "RelativePath": "api/EntityType/GetAllEntityTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetCountryEntityTypeMapping",
+    "RelativePath": "api/EntityType/GetCountryEntityTypeMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetCountryEntityTypeMappingApproval",
+    "RelativePath": "api/EntityType/GetCountryEntityTypeMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetEntityTypeApprovalList",
+    "RelativePath": "api/EntityType/GetEntityTypeApprovalList/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetEntityTypeByUID",
+    "RelativePath": "api/EntityType/GetEntityTypeByUID/{uid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "GetNextEntityTypeReferenceCode",
+    "RelativePath": "api/EntityType/GetNextEntityTypeReferenceCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostCountryEntityTypeMappingApprove",
+    "RelativePath": "api/EntityType/PostCountryEntityTypeApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostCountryEntityTypeForward",
+    "RelativePath": "api/EntityType/PostCountryEntityTypeForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostCountryEntityTypeMapping",
+    "RelativePath": "api/EntityType/PostCountryEntityTypeMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityType",
+        "Type": "ComplianceAPI.Models.EntityTypeModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostCountryEntityTypeMappingReject",
+    "RelativePath": "api/EntityType/PostCountryEntityTypeReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostEntityType",
+    "RelativePath": "api/EntityType/PostEntityType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityType",
+        "Type": "ComplianceAPI.Models.EntityTypeModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostEntityTypeApprove",
+    "RelativePath": "api/EntityType/PostEntityTypeApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostEntityTypeForward",
+    "RelativePath": "api/EntityType/PostEntityTypeForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.EntityTypeController",
+    "Method": "PostEntityTypeReject",
+    "RelativePath": "api/EntityType/PostEntityTypeReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FileUploadController",
+    "Method": "DeleteFile",
+    "RelativePath": "api/FileUpload/deleteFile",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FileUploadController",
+    "Method": "Upload",
+    "RelativePath": "api/FileUpload/FileUpload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "folderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FileUploadController",
+    "Method": "GetComseq",
+    "RelativePath": "api/FileUpload/GetComseq",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FileUploadController",
+    "Method": "GetFilesbyFolder",
+    "RelativePath": "api/FileUpload/getFiles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FolderManagement",
+    "Method": "CreateFolder",
+    "RelativePath": "api/FolderManagement/create-folder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "folder",
+        "Type": "ComplianceAPI.Models.Folder",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FolderManagement",
+    "Method": "FoldersListByEntity",
+    "RelativePath": "api/FolderManagement/FoldersByEntity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.FolderManagement",
+    "Method": "GetFolderTree",
+    "RelativePath": "api/FolderManagement/tree",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "intityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "mtype",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetAllMajorIndustries",
+    "RelativePath": "api/Industry/GetAllMajorIndustries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetCountryMajorMapping",
+    "RelativePath": "api/Industry/GetCountryMajorMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetCountryMajorMappingApproval",
+    "RelativePath": "api/Industry/GetCountryMajorMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetIndustryApproval",
+    "RelativePath": "api/Industry/GetIndustryApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetIndustryMapping",
+    "RelativePath": "api/Industry/GetIndustryMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetIndustryMappingApproval",
+    "RelativePath": "api/Industry/GetIndustryMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetIndustryMappingByCountry",
+    "RelativePath": "api/Industry/GetIndustryMappingByCountry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetIndustryMappingByMajor",
+    "RelativePath": "api/Industry/GetIndustryMappingByMajor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorInudustryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMajorIndustryApproval",
+    "RelativePath": "api/Industry/GetMajorIndustryApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMajorIndustryById",
+    "RelativePath": "api/Industry/GetMajorIndustryById/{CountryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CountryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMajorIndustryByUID",
+    "RelativePath": "api/Industry/GetMajorIndustryByUID/{uid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMajorMinorMapping",
+    "RelativePath": "api/Industry/GetMajorMinorMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMajorMinorMappingApproval",
+    "RelativePath": "api/Industry/GetMajorMinorMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMinorIndustryApproval",
+    "RelativePath": "api/Industry/GetMinorIndustryApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetMinorIndustryById",
+    "RelativePath": "api/Industry/GetMinorIndustryById/{majorIndustryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorIndustryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetNextMajorIndustryCode",
+    "RelativePath": "api/Industry/GetNextMajorIndustryCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "GetNextMinorIndustryCode",
+    "RelativePath": "api/Industry/GetNextMinorIndustryCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostCountryMajorMappingApprove",
+    "RelativePath": "api/Industry/PostCountryMajorApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostCountryMajorMapping",
+    "RelativePath": "api/Industry/PostCountryMajorMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "industryMapping",
+        "Type": "ComplianceAPI.Models.IndustryrMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostCountryMajorMappingReject",
+    "RelativePath": "api/Industry/PostCountryMajorReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorIndustry",
+    "RelativePath": "api/Industry/PostMajorIndustry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorIndustry",
+        "Type": "ComplianceAPI.Models.MajorIndustry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorIndustryApprove",
+    "RelativePath": "api/Industry/PostMajorIndustryApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorIndustryForward",
+    "RelativePath": "api/Industry/PostMajorIndustryForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorIndustryReject",
+    "RelativePath": "api/Industry/PostMajorIndustryReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorMinorMappingApprove",
+    "RelativePath": "api/Industry/PostMajorMinorApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorMinorIndustryForward",
+    "RelativePath": "api/Industry/PostMajorMinorIndustryForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorMinorMapping",
+    "RelativePath": "api/Industry/PostMajorMinorMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorMinorMapping",
+        "Type": "ComplianceAPI.Models.MajorMinorMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMajorMinorMappingReject",
+    "RelativePath": "api/Industry/PostMajorMinorReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMinorIndustry",
+    "RelativePath": "api/Industry/PostMinorIndustry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minorIndustry",
+        "Type": "ComplianceAPI.Models.MinorIndustry",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMinorIndustryApprove",
+    "RelativePath": "api/Industry/PostMinorIndustryApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMinorIndustryForward",
+    "RelativePath": "api/Industry/PostMinorIndustryForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.IndustryController",
+    "Method": "PostMinorIndustryReject",
+    "RelativePath": "api/Industry/PostMinorIndustryReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.LocationController",
+    "Method": "GetClientEntitiesLocations",
+    "RelativePath": "api/Location/GetClientEntitiesLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.NotificationController",
+    "Method": "GetAllApprovalNotifications",
+    "RelativePath": "api/Notification/GetAllApprovalNotifications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.NotificationController",
+    "Method": "MarkNotificationAsRead",
+    "RelativePath": "api/Notification/MarkNotificationAsRead",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "notificationId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "markAsRead",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetAllBillingLevel",
+    "RelativePath": "api/Organizations/GetAllBillingLevel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetAllOrganization",
+    "RelativePath": "api/Organizations/GetAllOrganization/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetAllOrganizations",
+    "RelativePath": "api/Organizations/GetAllOrganizations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetAllOrganizationWithoutStatus",
+    "RelativePath": "api/Organizations/GetAllOrganizationWithoutStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetAllProductType",
+    "RelativePath": "api/Organizations/GetAllProductType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetBillingLevelById",
+    "RelativePath": "api/Organizations/GetBillingLevelById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetOrganizationApprovalList",
+    "RelativePath": "api/Organizations/GetOrganizationApprovalList/{userUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userUID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetOrganizationById",
+    "RelativePath": "api/Organizations/GetOrganizationById/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetOrganizationsByCountry",
+    "RelativePath": "api/Organizations/GetOrganizationsByCountry/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetOrganizationsByUserandCountry",
+    "RelativePath": "api/Organizations/GetOrganizationsByUserandCountry/{userId}/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetOrgEntityList",
+    "RelativePath": "api/Organizations/GetOrgEntityList/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetOrgEntityLists",
+    "RelativePath": "api/Organizations/GetOrgEntityLists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "GetUserOrganizations",
+    "RelativePath": "api/Organizations/GetUserOrganizations/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.OrganizationDetail, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "PostOrganization",
+    "RelativePath": "api/Organizations/PostOrganization",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "organization",
+        "Type": "ComplianceAPI.Models.PostOrganization",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "PostOrganizationApprove",
+    "RelativePath": "api/Organizations/PostOrganizationApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "PostOrganizationForward",
+    "RelativePath": "api/Organizations/PostOrganizationForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.OrganizationsController",
+    "Method": "PostOrganizationReject",
+    "RelativePath": "api/Organizations/PostOrganizationReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "AddParameter",
+    "RelativePath": "api/ParameterSetup/AddParameter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parameter",
+        "Type": "ComplianceAPI.Models.AddParameter",
+        "IsRequired": true
+      },
+      {
+        "Name": "accessUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "deleteParameters",
+    "RelativePath": "api/ParameterSetup/deleteParameters/{uid}/{status}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "GetAllParameters",
+    "RelativePath": "api/ParameterSetup/GetAllParameters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "GetAllParametersApproval",
+    "RelativePath": "api/ParameterSetup/GetAllParametersApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "GetAllParametersApproval",
+    "RelativePath": "api/ParameterSetup/GetAllParametersApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "GetHistoryParameters",
+    "RelativePath": "api/ParameterSetup/GetHistoryParameters/{HistoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "HistoryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "GetNextParameterCode",
+    "RelativePath": "api/ParameterSetup/GetNextParameterCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "GetParameterById",
+    "RelativePath": "api/ParameterSetup/GetParameterById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "PostApproveAccess",
+    "RelativePath": "api/ParameterSetup/PostApproveAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "PostRejectAccess",
+    "RelativePath": "api/ParameterSetup/PostRejectAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.ParameterSetupController",
+    "Method": "PostReviewedAccess",
+    "RelativePath": "api/ParameterSetup/PostReviewedAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetCountryRegulationGroupMappingApproval",
+    "RelativePath": "api/RegulationGroup/GetAllCountryRegulationGroupMappingApproval",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetAllRegulationGroupApprovalList",
+    "RelativePath": "api/RegulationGroup/GetAllRegulationGroupApprovalList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetAllRegulationGroups",
+    "RelativePath": "api/RegulationGroup/GetAllRegulationGroups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetCountryRegulationGroupMapping",
+    "RelativePath": "api/RegulationGroup/GetCountryRegulationGroupMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetCountryRegulationGroupMappingApproval",
+    "RelativePath": "api/RegulationGroup/GetCountryRegulationGroupMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetNextRegulationGroupCode",
+    "RelativePath": "api/RegulationGroup/GetNextRegulationGroupCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetRegulationGroupApprovalList",
+    "RelativePath": "api/RegulationGroup/GetRegulationGroupApprovalList/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "GetRegulationGroupByUID",
+    "RelativePath": "api/RegulationGroup/GetRegulationGroupByUID/{uid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostCountryRegulationGroupMappingApprove",
+    "RelativePath": "api/RegulationGroup/PostCountryRegulationGroupApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostCountryRegulationGroupForward",
+    "RelativePath": "api/RegulationGroup/PostCountryRegulationGroupForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostCountryRegulationGroupMapping",
+    "RelativePath": "api/RegulationGroup/PostCountryRegulationGroupMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulation",
+        "Type": "ComplianceAPI.Models.RegulationGroupModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostCountryRegulationGroupMappingReject",
+    "RelativePath": "api/RegulationGroup/PostCountryRegulationGroupReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostRegulationGroup",
+    "RelativePath": "api/RegulationGroup/PostRegulationGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulation",
+        "Type": "ComplianceAPI.Models.RegulationGroupModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostRegulationGroupApprove",
+    "RelativePath": "api/RegulationGroup/PostRegulationGroupApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostRegulationGroupForward",
+    "RelativePath": "api/RegulationGroup/PostRegulationGroupForward",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.RegulationGroupController",
+    "Method": "PostRegulationGroupReject",
+    "RelativePath": "api/RegulationGroup/PostRegulationGroupReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "AddRegSetupComplianceAsync",
+    "RelativePath": "api/RegulationSetup/AddRegSetupComplianceAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulationStupComplianceParameters",
+        "Type": "ComplianceAPI.Models.RegSetupComplianceModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "AddRegulationSetupDetails",
+    "RelativePath": "api/RegulationSetup/AddRegulationSetupDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulationStupDetails",
+        "Type": "ComplianceAPI.Models.RegulationStupDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "ApproveRegSetupCompliance",
+    "RelativePath": "api/RegulationSetup/ApproveRegSetupCompliance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "ApproveRegulationSetup",
+    "RelativePath": "api/RegulationSetup/ApproveRegulationSetup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "ApproveTOCRegistration",
+    "RelativePath": "api/RegulationSetup/ApproveTOCRegistration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "ApproveTOCRule",
+    "RelativePath": "api/RegulationSetup/ApproveTOCRule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetAllRegisterations",
+    "RelativePath": "api/RegulationSetup/GetAllRegisteration",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetAllRegulationBasicAndParameterByCountryID",
+    "RelativePath": "api/RegulationSetup/GetAllRegulationBasicAndParameterByCountryID/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetAllRegulationSetupDetails",
+    "RelativePath": "api/RegulationSetup/GetAllRegulationSetupDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetAllTOC",
+    "RelativePath": "api/RegulationSetup/GetAllTOCDues",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetHistoryRegSetup",
+    "RelativePath": "api/RegulationSetup/GetHistoryRegSetup/{UID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetIndustryMapping",
+    "RelativePath": "api/RegulationSetup/GetIndustryMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetMinorIndustrybyMajorID",
+    "RelativePath": "api/RegulationSetup/GetMinorIndustrybyMajorID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorIndustoryId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetMinorIndustrybyMajorIDMap",
+    "RelativePath": "api/RegulationSetup/GetMinorIndustrybyMajorIDMap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorIndustoryId",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetNextRegulationSetupCode",
+    "RelativePath": "api/RegulationSetup/GetNextRegulationSetupCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetNextRegulationSetupComplianceCode",
+    "RelativePath": "api/RegulationSetup/GetNextRegulationSetupComplianceCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetNextRegulationSetupTypeOfComplianceDuesCode",
+    "RelativePath": "api/RegulationSetup/GetNextRegulationSetupTypeOfComplianceDuesCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetNextRegulationSetupTypeOfComplianceRegisterCode",
+    "RelativePath": "api/RegulationSetup/GetNextRegulationSetupTypeOfComplianceRegisterCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetPendingRegulationSetupApproval",
+    "RelativePath": "api/RegulationSetup/GetPendingRegulationSetupApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetRegSetupComplianceHistory",
+    "RelativePath": "api/RegulationSetup/GetRegSetupComplianceHistory/{UID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetRegSetupHistory",
+    "RelativePath": "api/RegulationSetup/GetRegSetupHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetRegulationsByCountryIds",
+    "RelativePath": "api/RegulationSetup/GetRegulationsByCountryIds",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryIds",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetRegulationSetupCompliance",
+    "RelativePath": "api/RegulationSetup/GetRegulationSetupCompliance/{complianceuid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "complianceuid",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetRegulationSetupDetails",
+    "RelativePath": "api/RegulationSetup/GetRegulationSetupDetails/{regSetupuid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regSetupuid",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetRegulationSetupParameters",
+    "RelativePath": "api/RegulationSetup/GetRegulationSetupParameters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetTOBMinorIndustrybyMajorIDMap",
+    "RelativePath": "api/RegulationSetup/GetTOBMinorIndustrybyMajorIDMap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ComplianceAPI.Models.TOBMinorIndustryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetTOCHistory",
+    "RelativePath": "api/RegulationSetup/GetTOCHistory/{historyId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "historyId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetTOCRegistration",
+    "RelativePath": "api/RegulationSetup/GetTOCRegistration/{tocRegId}/{complianceId}/{regulationid}/{ruleType}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tocRegId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "complianceId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "regulationid",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "ruleType",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "GetTOCRulesAsync",
+    "RelativePath": "api/RegulationSetup/GetTOCRulesAsync/{tocId}/{regulationid}/{ruleType}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tocId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "regulationid",
+        "Type": "System.Int64",
+        "IsRequired": true
+      },
+      {
+        "Name": "ruleType",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "PostApproveAccess",
+    "RelativePath": "api/RegulationSetup/PostApproveAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "PostRejectAccess",
+    "RelativePath": "api/RegulationSetup/PostRejectAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "PostReviewedAccess",
+    "RelativePath": "api/RegulationSetup/PostReviewedAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "PostTOCRegistration",
+    "RelativePath": "api/RegulationSetup/PostTOCRegistration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ComplianceAPI.Models.TOCRegistrationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "PostTOCRules",
+    "RelativePath": "api/RegulationSetup/PostTOCRules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ComplianceAPI.Models.TOCRules",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "RejectRegSetupCompliance",
+    "RelativePath": "api/RegulationSetup/RejectRegSetupCompliance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "RejectRegulationSetup",
+    "RelativePath": "api/RegulationSetup/RejectRegulationSetup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "RejectTOCRegistration",
+    "RelativePath": "api/RegulationSetup/RejectTOCRegistration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulationSetupController",
+    "Method": "TypeOfComplianceByRegulationSetupIdComplianceId",
+    "RelativePath": "api/RegulationSetup/TypeOfComplianceByRegulationSetupIdComplianceId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulationSetupId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "complianceId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "GetAllPendingRegAuth",
+    "RelativePath": "api/RegulatoryAuthority/GetAllPendingRegAuth/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.PostRegulatoryAuthorities, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "GetAllPendingRegAuthMapping",
+    "RelativePath": "api/RegulatoryAuthority/GetAllPendingRegAuthMapping/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.PostRegulatoryAuthorities, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "GetAllRegAuthMapping",
+    "RelativePath": "api/RegulatoryAuthority/GetAllRegAuthMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.CountryRegulatoryAuthorityMapping, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "GetAllRegulatoryAuthorities",
+    "RelativePath": "api/RegulatoryAuthority/GetAllRegulatoryAuthorities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "GetNextRegulatoryAuthRefCode",
+    "RelativePath": "api/RegulatoryAuthority/GetNextRegulatoryAuthRefCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "GetRegulatoryAuthoritiesListCountry",
+    "RelativePath": "api/RegulatoryAuthority/GetRegulatoryAuthoritiesListCountry/{countryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.RegulatoryAuthorities, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "PostCountryRegulatoryAuthorityMapping",
+    "RelativePath": "api/RegulatoryAuthority/PostCountryRegulatoryAuthorityMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryRegulatoryAuthorityMapping",
+        "Type": "ComplianceAPI.Models.CountryRegulatoryAuthorityMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "PostRegulatoryAuthority",
+    "RelativePath": "api/RegulatoryAuthority/PostRegulatoryAuthority",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulatoryAuthorities",
+        "Type": "ComplianceAPI.Models.PostRegulatoryAuthorities",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "SubmitRegulatoryAuthoritiesApprove",
+    "RelativePath": "api/RegulatoryAuthority/SubmitRegulatoryAuthoritiesApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regulatoryAuthorities",
+        "Type": "ComplianceAPI.Models.PostRegulatoryAuthorities",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.RegulatoryAuthorityController",
+    "Method": "SubmitRegulatoryAuthoritiesMappingApprove",
+    "RelativePath": "api/RegulatoryAuthority/SubmitRegulatoryAuthoritiesMappingApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryRegulatoryAuthorities",
+        "Type": "ComplianceAPI.Models.CountryRegulatoryAuthorityMapping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ReportController",
+    "Method": "GetAllComplianceWithCountriesReports",
+    "RelativePath": "api/Report/GetAllComplianceWithCountriesReports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ReportController",
+    "Method": "GetAllCountries",
+    "RelativePath": "api/Report/GetAllCountries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ReportController",
+    "Method": "GetAllEntityTypes",
+    "RelativePath": "api/Report/GetAllEntityTypeWithCountry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ReportController",
+    "Method": "GetAllRegulationWithCountriesAsync",
+    "RelativePath": "api/Report/GetAllRegulationWithCountries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ReportController",
+    "Method": "GetAllReportMaster",
+    "RelativePath": "api/Report/GetAllReportMaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ReportController",
+    "Method": "GetIndustryMapping",
+    "RelativePath": "api/Report/GetIndustryMappingWithCountry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ServiceRequestController",
+    "Method": "GetAllLevel",
+    "RelativePath": "api/ServiceRequest/GetAllLevel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.LevelMaster, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ServiceRequestController",
+    "Method": "GetServiceRequestsAsync",
+    "RelativePath": "api/ServiceRequest/GetServiceRequestsAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sortBy",
+        "Type": "ComplianceAPI.Models.Enums.ServiceRequestSortBy",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Result\u00601[[System.Collections.Generic.List\u00601[[ComplianceAPI.Models.ServiceRequest, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ServiceRequestController",
+    "Method": "GetServiceRequestsByEntityAsync",
+    "RelativePath": "api/ServiceRequest/GetServiceRequestsByEntityAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entityId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ComplianceAPI.Models.ServiceRequest, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ServiceRequestController",
+    "Method": "SetExpectedDateAndLevelTypeAsync",
+    "RelativePath": "api/ServiceRequest/SetExpectedDateAndLevelTypeAsync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceRequest",
+        "Type": "ComplianceAPI.Models.ServiceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ComplianceAPI.Models.Result\u00601[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "ComplianceAPI.Models.Result\u00601[[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "AddTOBDetails",
+    "RelativePath": "api/TOB/AddTOBDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tobDetails",
+        "Type": "ComplianceAPI.Models.TOB",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "ApproveTOB",
+    "RelativePath": "api/TOB/ApproveTOB",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetHistoryTOB",
+    "RelativePath": "api/TOB/GetHistoryTOB/{UID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetNextTOBCode",
+    "RelativePath": "api/TOB/GetNextTOBCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetPendingTOBApproval",
+    "RelativePath": "api/TOB/GetPendingTOBApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBHistory",
+    "RelativePath": "api/TOB/GetTOBHistory/{HistoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "HistoryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBList",
+    "RelativePath": "api/TOB/GetTOBList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBMapping",
+    "RelativePath": "api/TOB/GetTOBMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBMappingApproval",
+    "RelativePath": "api/TOB/GetTOBMappingApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBMappingByCountry",
+    "RelativePath": "api/TOB/GetTOBMappingByCountry",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBMappingByMajor",
+    "RelativePath": "api/TOB/GetTOBMappingByMajor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "majorInudustryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBMappingByMinor",
+    "RelativePath": "api/TOB/GetTOBMappingByMinor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minorInudustryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "majorInudustryId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "countryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "GetTOBMinorIndusryMapping",
+    "RelativePath": "api/TOB/GetTOBMinorIndusryMapping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tobId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "PostTOBMapping",
+    "RelativePath": "api/TOB/PostTOBMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tobMapping",
+        "Type": "ComplianceAPI.Models.TOBMappingList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "PostCountryMajorMappingApprove",
+    "RelativePath": "api/TOB/PostTOBMappingApprove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "PostCountryMajorMappingReject",
+    "RelativePath": "api/TOB/PostTOBMappingReject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.ProductOwner.TOBController",
+    "Method": "RejectTOB",
+    "RelativePath": "api/TOB/RejectTOB",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "deleteUsers",
+    "RelativePath": "api/UserManagement/deleteUsers/{uid}/{status}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/UserManagement/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgotPassword",
+        "Type": "ComplianceAPI.Models.ForgotPassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/UserManagement/GetAllProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/UserManagement/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetAllRolesApproval",
+    "RelativePath": "api/UserManagement/GetAllRolesApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/UserManagement/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetAllUsersApproval",
+    "RelativePath": "api/UserManagement/GetAllUsersApproval/{UserUID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetHistoryRoles",
+    "RelativePath": "api/UserManagement/GetHistoryRoles/{HistoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "HistoryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetHistoryUsers",
+    "RelativePath": "api/UserManagement/GetHistoryUsers/{HistoryId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "HistoryId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetRoles",
+    "RelativePath": "api/UserManagement/GetRoles/{uid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "GetUsers",
+    "RelativePath": "api/UserManagement/GetUsers/{uid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "Login",
+    "RelativePath": "api/UserManagement/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "ComplianceAPI.Models.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "PostApproveAccess",
+    "RelativePath": "api/UserManagement/PostApproveAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "PostForwardAccess",
+    "RelativePath": "api/UserManagement/PostForwardAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "PostRejectAccess",
+    "RelativePath": "api/UserManagement/PostRejectAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "PostReviewedAccess",
+    "RelativePath": "api/UserManagement/PostReviewedAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "PostUser",
+    "RelativePath": "api/UserManagement/PostUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "ComplianceAPI.Models.PostUser",
+        "IsRequired": true
+      },
+      {
+        "Name": "accessUID",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "UpdateApproveAccess",
+    "RelativePath": "api/UserManagement/UpdateApproveAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "UpdateRejectAccess",
+    "RelativePath": "api/UserManagement/UpdateRejectAccess",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "access",
+        "Type": "ComplianceAPI.Models.AccessModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.UserManagementController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/UserManagement/UpdateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roles",
+        "Type": "ComplianceAPI.Models.UpdateRoles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ComplianceAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ComplianceAPI.WeatherForecast, ComplianceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

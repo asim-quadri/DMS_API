@@ -1,68 +1,222 @@
-﻿using Dms_Api.Services;
-using DmsApi.Models;
+﻿using ComplianceAPI.Models;
+using ComplianceAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dms_Api.Controllers
+namespace ComplianceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EntitiesController : ControllerBase
+    public class EntityController : ControllerBase
     {
         private readonly IEntityService _entityService;
 
-        public EntitiesController(IEntityService entityService)
+        public EntityController(IEntityService entityService)
         {
             _entityService = entityService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllEntities()
+        [Route("GetEntityApprovalList/{userId}")]
+        public async Task<ActionResult> GetEntityApprovalList(int userId)
         {
-            var entities = await _entityService.GetAllEntities();
-            return Ok(entities);
+            try
+            {
+                var obj = await _entityService.GetEntityApprovalList(userId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-    //    [HttpGet("{id}")]
-    //    public async Task<IActionResult> GetEntityById(int id)
-    //    {
-    //        var entity = await _entityService.GetEntityByIdAsync(id);
-    //        if (entity == null)
-    //        {
-    //            return NotFound();
-    //        }
-    //        return Ok(entity);
-    //    }
+        [HttpGet]
+        [Route("GetAllEntitiesByOrgId")]
+        public async Task<ActionResult> GetAllEntitiesByOrgId([FromQuery] int orgId)
+        {
+            try
+            {
+                var obj = await _entityService.GetAllEntitiesByOrgId(orgId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-    //    [HttpPost]
-    //    public async Task<IActionResult> AddEntity([FromBody] Entity entity)
-    //    {
-    //        if (!ModelState.IsValid)
-    //        {
-    //            return BadRequest(ModelState);
-    //        }
+        [HttpGet]
+        [Route("GetEntityDetails")]
+        public async Task<ActionResult> GetEntityDetails([FromQuery] int entityId)
+        {
+            try
+            {
+                var obj = await _entityService.GetEntityDetails(entityId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-    //        var createdEntity = await _entityService.AddEntityAsync(entity);
-    //        return CreatedAtAction(nameof(GetEntityById), new { id = createdEntity.Id }, createdEntity);
-    //    }
+        [HttpGet]
+        [Route("GetEntityView")]
+        public async Task<ActionResult> GetEntityView([FromQuery] int entityId)
+        {
+            try
+            {
+                var obj = await _entityService.GetEntityView(entityId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-    //    [HttpPut("{id}")]
-    //    public async Task<IActionResult> UpdateEntity(int id, [FromBody] Entity entity)
-    //    {
-    //        if (id != entity.Id)
-    //        {
-    //            return BadRequest();
-    //        }
+        [HttpPost]
+        [Route("PostEntity")]
+        public async Task<ActionResult> PostEntity([FromBody] PostEntity entity)
+        {
+            try
+            {
+                var obj = await _entityService.PostEntity(entity);
+                if (obj != null)
+                    return Ok(obj);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-    //        await _entityService.UpdateEntityAsync(entity);
-    //        return NoContent();
-    //    }
+        [HttpPost]
+        [Route("PostEntityApprove")]
+        public async Task<ActionResult> PostEntityApprove([FromBody] AccessModel access)
+        {
+            try
+            {
+                var obj = await _entityService.PostEntityApprove(access);
+                if (obj != null)
+                    return Ok(obj);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-    //    [HttpDelete("{id}")]
-    //    public async Task<IActionResult> DeleteEntity(int id)
-    //    {
-    //        await _entityService.DeleteEntityAsync(id);
-    //        return NoContent();
-    //    }
+        [HttpPost]
+        [Route("PostEntityReject")]
+        public async Task<ActionResult> PostEntityReject([FromBody] AccessModel access)
+        {
+            try
+            {
+                var obj = await _entityService.PostEntityReject(access);
+                if (obj != null)
+                    return Ok(obj);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("PostEntityForward")]
+        public async Task<ActionResult> PostEntityForward([FromBody] AccessModel access)
+        {
+            try
+            {
+                var obj = await _entityService.PostEntityForward(access);
+                if (obj != null)
+                    return Ok(obj);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetStartAndEndMonthsByCountryId")]
+        public async Task<ActionResult> GetStartAndEndMonthsByCountryId([FromQuery] int countryId)
+        {
+            try
+            {
+                var obj = await _entityService.GetStartAndEndMonthsByCountryId(countryId);
+                if (obj != null)
+                    return Ok(obj);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("GetEntitiesByOrganizationId/{organizationId}")]
+        [ProducesResponseType(typeof(Response), 200)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetEntitiesByOrganizationId(long organizationId)
+        {
+            try
+            {
+                var response = await _entityService.GetEntitiesByOrganizationId(organizationId);
+                return Ok(response);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while processing your request.");
+            }
+        }
+
+        [HttpGet("GetEntitiesByOrganizationAndCountryId/{organizationId}/{countryId}")]
+        [ProducesResponseType(typeof(Response), 200)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetEntitiesByOrganizationAndCountryId(long organizationId,long countryId)
+        {
+            try
+            {
+                var response = await _entityService.GetEntitiesByOrganizationAndCountryId(organizationId,countryId);
+                return Ok(response);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while processing your request.");
+            }
+        }
+
+
+        [HttpGet]
+        [Route("GetEntitiesLocations/{organizationId}")]
+        public async Task<ActionResult> GetClientEntitiesLocations(int organizationId)
+        {
+            try
+            {
+                var obj = await _entityService.GetClientEntitiesLocations(organizationId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
-
 }

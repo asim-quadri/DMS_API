@@ -1,11 +1,11 @@
-﻿using DmsApi.Models;
+﻿using ComplianceAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using DmsApi.Services;
+using ComplianceAPI.Services;
 using Microsoft.AspNetCore.Cors;
-using DmsApi.Repository;
+using ComplianceAPI.Repository;
 
-namespace DmsApi.Controllers
+namespace ComplianceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -47,9 +47,9 @@ namespace DmsApi.Controllers
 
         }
         [HttpGet("tree")]
-        public async Task<IActionResult> GetFolderTree(int intityId, int userId)
+        public async Task<IActionResult> GetFolderTree(int intityId, int userId,string? mtype="Dms")
         {
-            var folderTree = await _folderService.GetFolderTreeAsync(intityId, userId);
+            var folderTree = await _folderService.GetFolderTreeAsync(intityId, userId,mtype);
             return Ok(folderTree);
         }
     }

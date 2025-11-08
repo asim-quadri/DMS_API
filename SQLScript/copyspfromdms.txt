@@ -1,0 +1,160 @@
+
+--storeprocedures
+
+create PROCEDURE [dbo].[USP_CREATEFILE]  
+ (  
+ @FileName varchar(1000),  
+ @FileType varchar(100),  
+ @FilePath varchar(1000),  
+ @FolderId INT,  
+ @UserId INT  
+ )  
+AS  
+BEGIN  
+  
+  INSERT INTO [dbo].[Files]([FileName],[FileType],[CreatedOn],[FilePath],[FolderId],[UserId])  
+  VALUES  (@FileName ,@FileType ,getdate()  ,@FilePath  ,@FolderId  ,@UserId)  
+
+  Select * from Files
+
+  END;
+
+
+  create PROCEDURE [dbo].[USP_CREATEFOLDER]     
+ (    
+ @Id Int = 0,  
+ @FolderName varchar(500),    
+ @UserId INT,    
+ @IsParent bit,  
+ @ParentId INT,  
+ @EntityId INT,
+ @mtype varchar(50)
+ )    
+AS    
+BEGIN    
+    
+  INSERT INTO Folders(FolderName,UserId,IsParent,ParentId,EntityId,module_type,CreatedOn)    
+        VALUES(@FolderName,@UserId,@IsParent,@ParentId,@EntityId,@mtype,getDate())    
+    
+END;    
+
+
+create PROCEDURE [dbo].[USP_CREATEFOLDER]     
+ (    
+ @Id Int = 0,  
+ @FolderName varchar(500),    
+ @UserId INT,    
+ @IsParent bit,  
+ @ParentId INT,  
+ @EntityId INT,
+  @mtype varchar(50)
+ )    
+AS    
+BEGIN    
+    
+  INSERT INTO Folders(FolderName,UserId,IsParent,ParentId,EntityId,module_type,CreatedOn)    
+        VALUES(@FolderName,@UserId,@IsParent,@ParentId,@EntityId,@mtype,getDate())    
+    
+END; 
+
+  --end storeprocedures
+
+
+
+--create tables
+
+USE [Dms]
+GO
+
+/****** Object:  Table [dbo].[Entity]    Script Date: 03-11-2025 11:32:05 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Entity](
+	[Id] [bigint] IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
+	[EntityName] [nvarchar](100) NOT NULL,
+	[OrganizationId] [bigint] NULL,
+	[CountryId] [bigint] NULL,
+	[StateId] [bigint] NULL,
+	[City] [nvarchar](100) NULL,
+	[Address] [nvarchar](100) NULL,
+	[CreatedOn] [datetime] NULL,
+	[CreatedBy] [bigint] NULL,
+	[ModifiedOn] [datetime] NULL,
+	[ModifiedBy] [bigint] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-- 2nd table
+USE [Dms]
+GO
+
+/****** Object:  Table [dbo].[Folders]    Script Date: 03-11-2025 11:34:55 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Folders](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[FolderName] [varchar](50) NULL,
+	[ParentId] [bigint] NULL,
+	[UserId] [bigint] NULL,
+	[IsParent] [bit] NULL,
+	[EntityId] [bigint] NULL,
+	[module_type] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+ CONSTRAINT [PK_Folder] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Folders]  WITH CHECK ADD  CONSTRAINT [FK_Folder_Users] FOREIGN KEY([UserId])
+REFERENCES [dbo].[Users] ([Id])
+GO
+
+ALTER TABLE [dbo].[Folders] CHECK CONSTRAINT [FK_Folder_Users]
+GO
+
+-- 3rd table
+USE [Dms]
+GO
+
+/****** Object:  Table [dbo].[Files]    Script Date: 03-11-2025 11:36:22 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Files](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[FileName] [varchar](50) NOT NULL,
+	[FileType] [varchar](50) NOT NULL,
+	[CreatedOn] [datetime] NOT NULL,
+	[FilePath] [varchar](500) NOT NULL,
+	[FolderId] [bigint] NOT NULL,
+	[UserId] [bigint] NOT NULL,
+ CONSTRAINT [PK_FileUpload] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Files]  WITH CHECK ADD  CONSTRAINT [FK_File_Folder] FOREIGN KEY([FolderId])
+REFERENCES [dbo].[Folders] ([Id])
+GO
+
+ALTER TABLE [dbo].[Files] CHECK CONSTRAINT [FK_File_Folder]
+GO
+

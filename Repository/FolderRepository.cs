@@ -1,15 +1,15 @@
 ﻿using Dapper;
-using DmsApi.Models;
-using DmsApi.Services;
+using ComplianceAPI.Models;
+using ComplianceAPI.Services;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public interface IFolderRepository
     {
             Task<bool> CreateFolder( Folder folder);
             Task<List<Folder>> GetFoldersListByEntity(int entityId);
             Task<bool> DeleteFolder( int folderId);
-            Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId,int userId);
+            Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId,int userId, string type);
     }
 
     public class FolderRepository : IFolderRepository
@@ -76,13 +76,13 @@ namespace DmsApi.Repository
 
             return Task.FromResult(false);
         }
-        public async Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId, int userId)
+        public async Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId, int userId, string type)
         {
-            var query = "SELECT * FROM Folders";
+            var query = "SELECT * FROM Folders where module_type=@mtype";
 
             using (var connection = _unitOfWork.ConnectionFactory())
             {
-                var folders = await connection.QueryAsync<Folder>(query);
+                var folders = await connection.QueryAsync<Folder>(query, new {mtype=type});
 
                 // Convert folders to hierarchical structure
                 var rootFolders = folders.Where(f => f.ParentId == 0).ToList();
@@ -102,7 +102,7 @@ namespace DmsApi.Repository
                 {   
                     Id = folder.Id,
                     Label = folder.FolderName,
-                    Expanded = true,
+                    Expanded = false,
                     ParentId = folder.ParentId,
                     Children = BuildTree(allFolders.Where(f => f.ParentId == folder.Id), allFolders)
                 };

@@ -1,6 +1,5 @@
-﻿namespace DmsApi.Helpers
+﻿namespace ComplianceAPI.Helpers
 {
-
     // Need to replace with string values
     public static class RefApprovalStatus
     {
@@ -8,6 +7,7 @@
         public static int Approved = 2;
         public static int Rejected = 3;
         public static int Reviewed = 4;
+        public static int Forward = 5;
     }
 
     public static class RefApprovalStatusU
@@ -24,5 +24,11 @@
         public static int User = 1;
         public static int Role = 2;
         public static int Access = 3;
+    }
+
+    public static class ApprovalTypes
+    {
+        public const string New = "New";
+        public const string Closed = "Closed";
     }
 }

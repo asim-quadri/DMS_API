@@ -1,5 +1,6 @@
-﻿using DmsApi.Models;
-using DmsApi.Services;
+﻿using ComplianceAPI.Models;
+using ComplianceAPI.Repository;
+using ComplianceAPI.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 
-namespace DmsApi.Controllers
+namespace ComplianceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -25,9 +26,11 @@ namespace DmsApi.Controllers
         private readonly IFileUploadService _fileService;
         private readonly IConfiguration _configuration;
         private readonly string _fileUrl;
-
-        public FileUploadController(IFileUploadService fileService, IConfiguration configuration)
+        private readonly IDmsService _dmsService;
+        public FileUploadController(IFileUploadService fileService, IConfiguration configuration, IDmsService dmsService)
         {
+            _dmsService = dmsService;
+            _fileService = fileService;
             _configuration = configuration;
             // Check if the application is in Development or Production mode
             var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
@@ -41,6 +44,21 @@ namespace DmsApi.Controllers
             }
             _fileService = fileService;
 
+        }
+        [HttpGet("GetComseq")]
+        public async Task<ActionResult> GetComseq()
+        {
+            try
+            {
+                var comseq = await _dmsService.getcomseqdata();
+                if (comseq != null)
+                    return Ok(comseq);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost("FileUpload")]
@@ -120,6 +138,8 @@ namespace DmsApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
     }
 }
 

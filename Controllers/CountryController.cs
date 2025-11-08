@@ -1,17 +1,38 @@
-﻿using DmsApi.Models;
-using DmsApi.Services;
+﻿using ComplianceAPI.Helpers;
+using ComplianceAPI.Models;
+using ComplianceAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dms_Api.Controllers
+namespace ComplianceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CountryController : ControllerBase
     {
         private readonly ICountryServices _countryServices;
-        public CountryController(ICountryServices countryServices)
+        private readonly CountriesFromJson _countriesFromJson;
+
+        public CountryController(ICountryServices countryServices, CountriesFromJson countriesFromJson)
         {
             _countryServices = countryServices;
+            _countriesFromJson = countriesFromJson;
+        }
+
+        [HttpGet]
+        [Route("GetAllCountryMaster")]
+        public async Task<ActionResult> GetAllCountryMaster(int userId)
+        {
+            try
+            {
+                var obj = await _countryServices.GetAllCountryMaster(userId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]
@@ -21,6 +42,40 @@ namespace Dms_Api.Controllers
             try
             {
                 var obj = await _countryServices.GetAllCountries();
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetAllCountriesFromJsonFile")]
+        public ActionResult GetAllCountriesFromJsonFile()
+        {
+            try
+            {
+                var obj = _countriesFromJson.GetCountries();
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetCountryByOrgId/{id}")]
+        public async Task<ActionResult> GetCountryByOrgId(int id)
+        {
+            try
+            {
+                var obj = await _countryServices.GetCountryByOrgId(id);
                 if (obj != null)
                     return Ok(obj);
                 return NotFound();
@@ -71,6 +126,9 @@ namespace Dms_Api.Controllers
         {
             try
             {
+
+                //country.UID = Guid.Parse("16193229-D8DC-4B89-8209-4E2FADE34930");
+
                 var obj = await _countryServices.PostCountry(country);
                 if (obj != null)
                     return Ok(obj);
@@ -100,12 +158,12 @@ namespace Dms_Api.Controllers
         }
 
         [HttpGet]
-        [Route("GetStateById/{CountryId}")]
-        public async Task<ActionResult> GetStateById(int CountryId)
+        [Route("GetStateById/{CountryId}/{userId}")]
+        public async Task<ActionResult> GetStateById(int CountryId, int userId)
         {
             try
             {
-                var obj = await _countryServices.GetStateById(CountryId);
+                var obj = await _countryServices.GetStateById(CountryId, userId);
                 if (obj != null)
                     return Ok(obj);
                 return NotFound();
@@ -115,7 +173,6 @@ namespace Dms_Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
 
         [HttpGet]
         [Route("GetCountryStateMapping")]
@@ -136,7 +193,7 @@ namespace Dms_Api.Controllers
 
         [HttpPost]
         [Route("PostCountryStateMapping")]
-        public async Task<ActionResult> PostCountryStateMapping([FromBody] CountryStateMapping country)
+        public async Task<ActionResult> PostCountryStateMapping([FromBody] CountryStateMappingModel country)
         {
             try
             {
@@ -150,9 +207,10 @@ namespace Dms_Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
         [HttpPost]
         [Route("DeleteCountryStateMapping")]
-        public async Task<ActionResult> DeleteCountryStateMapping([FromBody] CountryStateMapping country)
+        public async Task<ActionResult> DeleteCountryStateMapping([FromBody] CountryStateMappingModel country)
         {
             try
             {
@@ -185,12 +243,46 @@ namespace Dms_Api.Controllers
         }
 
         [HttpGet]
+        [Route("GetAllCountryStateApproval")]
+        public async Task<ActionResult> GetAllCountryStateApproval()
+        {
+            try
+            {
+                var obj = await _countryServices.GetAllCountryStateApproval();
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
         [Route("GetCountryStateMappingApproval/{UserUID}")]
         public async Task<ActionResult> GetCountryStateMappingApproval(Guid UserUID)
         {
             try
             {
                 var obj = await _countryServices.GetCountryStateMappingApprovaList(UserUID);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetAllCountryStateMappingApproval")]
+        public async Task<ActionResult> GetAllCountryStateMappingApproval()
+        {
+            try
+            {
+                var obj = await _countryServices.GetAllCountryStateMappingApprovaList();
                 if (obj != null)
                     return Ok(obj);
                 return NotFound();
@@ -234,7 +326,6 @@ namespace Dms_Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
 
         [HttpPost]
         [Route("PostCountryForward")]
@@ -304,7 +395,6 @@ namespace Dms_Api.Controllers
             }
         }
 
-
         [HttpPost]
         [Route("PostCountryStateApprove")]
         public async Task<ActionResult> PostCountryStateMappingApprove([FromBody] AccessModel access)
@@ -349,6 +439,169 @@ namespace Dms_Api.Controllers
                 if (obj != null)
                     return Ok(obj);
                 return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetAllCurrencyCodes")]
+        public async Task<ActionResult> GetAllCurrencyCodes()
+        {
+            try
+            {
+                var obj = await _countryServices.GetAllCurrencyCodes();
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("PostUserCountryMapping")]
+        public async Task<ActionResult> PostUserCountryMapping([FromBody] List<UserCountryMappingModel> userCountryMappings)
+        {
+            try
+            {
+                var obj = await _countryServices.PostUserCountryMapping(userCountryMappings);
+                if (obj != null)
+                    return Ok(obj);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("PostUserStateMapping")]
+        public async Task<ActionResult> PostUserStateMapping([FromBody] List<UserStateMappingModel> userStates)
+        {
+            try
+            {
+                if (userStates == null || !userStates.Any())
+                {
+                    return BadRequest("User states cannot be null or empty.");
+                }
+                // Assuming there's a method in _accessServices to save user states
+                var result = await _countryServices.PostUserStateMapping(userStates);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("GetUserStateMapping")]
+        public async Task<ActionResult> GetUserStateMapping(int userId)
+        {
+            try
+            {
+                var obj = await _countryServices.GetUserStateMapping(userId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("GetServiceReqAndBillingDetails/{userId}/{countryId}")]
+        public async Task<ActionResult> GetServiceReqAndBillingDetails(long userId, long countryId)
+        {
+            try
+            {
+                var obj = await _countryServices.GetServiceReqAndBillingDetails(userId, countryId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("GetServiceReqAndBillingDetailsByState/{userId}/{stateId}")]
+        public async Task<ActionResult> GetServiceReqAndBillingDetailsByState(long userId, long stateId)
+        {
+            try
+            {
+                var obj = await _countryServices.GetServiceReqAndBillingDetailsByState(userId, stateId);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetNextStateCode")]
+        public async Task<ActionResult> GetNextStateCode()
+        {
+            try
+            {
+                var code = await _countryServices.GetNextStateCode();
+                return Ok(code);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetNextCountryCode")]
+        public async Task<ActionResult> GetNextCountryCode()
+        {
+            try
+            {
+                var code = await _countryServices.GetNextCountryCode();
+                return Ok(code);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetLastCountryIndex")]
+        public async Task<ActionResult> GetLastCountryReferenceCode()
+        {
+            try
+            {
+                var result = await _countryServices.GetLastCountryReferenceCode();
+                if (!string.IsNullOrEmpty(result))
+                    return Ok(result);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetLastStateIndex")]
+        public async Task<ActionResult> GetLastStateReferenceCode()
+        {
+            try
+            {
+                var result = await _countryServices.GetLastStateReferenceCode();
+                if (!string.IsNullOrEmpty(result))
+                    return Ok(result);
+                return NotFound();
             }
             catch (Exception ex)
             {

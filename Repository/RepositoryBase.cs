@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using System.Data.SqlClient;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public class RepositoryBase
     {
@@ -12,9 +11,10 @@ namespace DmsApi.Repository
         {
             ConnectionString = configuration.GetConnectionString("MasterConnection");
         }
+
         protected RepositoryBase(IConfiguration configuration, IMapper mapper) : this(configuration)
         {
-            Mapper= mapper;
+            Mapper = mapper;
         }
 
         //protected SqlConnection ConnectionFactory()

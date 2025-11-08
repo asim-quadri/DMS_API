@@ -1,10 +1,8 @@
-﻿using DmsApi.Models;
-using Microsoft.AspNetCore.Http;
+﻿using ComplianceAPI.Models;
+using ComplianceAPI.Services;
 using Microsoft.AspNetCore.Mvc;
-using DmsApi.Services;
-using Microsoft.AspNetCore.Cors;
 
-namespace DmsApi.Controllers
+namespace ComplianceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -14,19 +12,25 @@ namespace DmsApi.Controllers
 
         public UserManagementController(IUserServices userServices)
         {
-            _usersServices= userServices;
+            _usersServices = userServices;
         }
+
         [HttpPost]
         [Route("Login")]
         public async Task<ActionResult> Login([FromBody] Login login)
         {
-            var obj = await _usersServices.login(login);
-            if (obj != null)
-                return Ok(obj);
-            return NotFound();
-            
+            try
+            {
+                var obj = await _usersServices.login(login);
+                if (obj != null)
+                    return Ok(obj);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return NotFound();
+            }
         }
-
 
         [HttpGet]
         [Route("GetAllUsers")]
@@ -39,12 +43,12 @@ namespace DmsApi.Controllers
                     return Ok(obj);
                 return NotFound();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-
         }
+
         [HttpGet]
         [Route("GetUsers/{uid}")]
         public async Task<ActionResult> GetUsers(Guid uid)
@@ -53,22 +57,40 @@ namespace DmsApi.Controllers
             if (obj != null)
                 return Ok(obj);
             return NotFound();
-
         }
 
+        [HttpGet]
+        [Route("GetHistoryUsers/{HistoryId}")]
+        public async Task<ActionResult> GetHistoryUsers(long HistoryId)
+        {
+            var obj = await _usersServices.GetHistoryUsers(HistoryId);
+            if (obj != null)
+                return Ok(obj);
+            return NotFound();
+        }
+
+        [HttpGet]
+        [Route("GetHistoryRoles/{HistoryId}")]
+        public async Task<ActionResult> GetHistoryRoles(long HistoryId)
+        {
+            var obj = await _usersServices.GetHistoryRoles(HistoryId);
+            if (obj != null)
+                return Ok(obj);
+            return NotFound();
+        }
 
         [HttpPost]
         [Route("PostUser")]
-        public async Task<ActionResult> PostUser([FromBody] PostUser user)
+        public async Task<ActionResult> PostUser([FromBody] PostUser user, Guid? accessUID)
         {
             try
             {
-                var obj = await _usersServices.PostUser(user);
+                var obj = await _usersServices.PostUser(user, accessUID);
                 if (obj != null)
                     return Ok(obj);
                 return BadRequest();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -85,7 +107,7 @@ namespace DmsApi.Controllers
                     return Ok(obj);
                 return BadRequest();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -102,11 +124,10 @@ namespace DmsApi.Controllers
         [Route("deleteUsers/{uid}/{status}")]
         public async Task<ActionResult> deleteUsers(Guid uid, int status)
         {
-            var obj = await _usersServices.DeleteUsers(uid,status);
+            var obj = await _usersServices.DeleteUsers(uid, status);
             if (obj != null)
                 return Ok(obj);
             return NotFound();
-
         }
 
         [HttpGet]
@@ -117,7 +138,6 @@ namespace DmsApi.Controllers
             if (obj != null)
                 return Ok(obj);
             return NotFound();
-
         }
 
         [HttpGet]
@@ -128,7 +148,6 @@ namespace DmsApi.Controllers
             if (obj != null)
                 return Ok(obj);
             return NotFound();
-
         }
 
         [HttpGet]
@@ -139,9 +158,7 @@ namespace DmsApi.Controllers
             if (obj != null)
                 return Ok(obj);
             return NotFound();
-
         }
-
 
         //[HttpPost]
         //[Route("PostProductAccess")]
@@ -192,7 +209,6 @@ namespace DmsApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
-
         }
 
         [HttpGet]
@@ -210,7 +226,6 @@ namespace DmsApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
-
         }
 
         [HttpPost]
@@ -265,6 +280,36 @@ namespace DmsApi.Controllers
             try
             {
                 var obj = await _usersServices.PostUserRejectAccess(access);
+                return Ok(obj);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("PostReviewedAccess")]
+        public async Task<ActionResult> PostReviewedAccess([FromBody] AccessModel access)
+        {
+            try
+            {
+                var obj = await _usersServices.PostUserReviewAccess(access);
+                return Ok(obj);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("PostForwardAccess")]
+        public async Task<ActionResult> PostForwardAccess([FromBody] AccessModel access)
+        {
+            try
+            {
+                var obj = await _usersServices.PostUserForwardAccess(access);
                 return Ok(obj);
             }
             catch (Exception ex)

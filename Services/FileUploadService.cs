@@ -1,7 +1,7 @@
-﻿using DmsApi.Models;
-using DmsApi.Repository;
+﻿using ComplianceAPI.Models;
+using ComplianceAPI.Repository;
 
-namespace DmsApi.Services
+namespace ComplianceAPI.Services
 {
     public interface IFileUploadService
     {

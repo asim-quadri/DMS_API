@@ -1,9 +1,10 @@
 ﻿using Dapper;
-using DmsApi.Helpers;
-using DmsApi.Models;
-using DmsApi.Services;
+using ComplianceAPI.Helpers;
+using ComplianceAPI.Models;
+using ComplianceAPI.Services;
+using ComplianceAPI.Repository;
 
-namespace DmsApi.Repository
+namespace ComplianceAPI.Repository
 {
     public interface IFileUploadRepository
     {
@@ -42,9 +43,10 @@ namespace DmsApi.Repository
         {
             using (var sqlContext = _unitOfWork.ContextFactory())
             {
+                var data = new { fileDetail.FileName, fileDetail.FileType, fileDetail.FilePath, fileDetail.FolderId, fileDetail.UserId };
                 try
                 {
-                    var obj = await sqlContext.Connection.QueryAsync<FileDetail>("USP_CREATEFILE", fileDetail, commandType: System.Data.CommandType.StoredProcedure, transaction: sqlContext.Transaction).ConfigureAwait(false);
+                    var obj = await sqlContext.Connection.QueryAsync<FileDetail>("USP_CREATEFILE", data, commandType: System.Data.CommandType.StoredProcedure, transaction: sqlContext.Transaction).ConfigureAwait(false);
                     sqlContext.Commit();
                 }
                 catch (Exception ex)
@@ -84,8 +86,10 @@ namespace DmsApi.Repository
             ON 
                 f.ParentId = rf.Id
         )
-        SELECT * 
-        FROM Files
+        SELECT fi.*,u.FullName,f.FolderName 
+        FROM Files fi
+        INNER JOIN Users u ON fi.UserId = u.Id
+        INNER JOIN Folders f ON fi.FolderId = f.Id
         WHERE FolderId IN (
             SELECT Id FROM RecursiveFolders
             UNION
