@@ -9,7 +9,7 @@ namespace ComplianceAPI.Repository
     public interface IFileUploadRepository
     {
             Task<bool> SaveFileDetails(FileDetail fileDetail);
-            Task<List<FileDetail>> GetFilesListbyFolder(int folderId);
+            Task<List<FileDetail>> GetFilesListbyFolder(int folderId,string type);
             Task<bool> DeleteFile( int fileId);
 
     }
@@ -61,50 +61,103 @@ namespace ComplianceAPI.Repository
 
         }
 
-        public async Task<List<FileDetail>> GetFilesListbyFolder(int folderId)
+        public async Task<List<FileDetail>> GetFilesListbyFolder(int folderId, string type)
         {
-            using (var connection = _unitOfWork.ConnectionFactory())
+            using var connection = _unitOfWork.ConnectionFactory();
+
+            var query = "";
+            if (type == "Dms")
             {
-                // Define the SQL query with a parameter placeholder
-                var query = @"
-        ;WITH RecursiveFolders AS (
+                query = @"
+                   ;WITH RootFolders AS (
+                -- Resolve @ParentId to actual folder Id(s) via Id OR EntityId
+                SELECT Id
+                FROM Folders
+                WHERE (Id = @ParentId
+                   OR EntityId = @ParentId) and module_type='Dms'
+            ),
+            RecursiveFolders AS (
+                -- Start from resolved root folder(s)
+                SELECT Id
+                FROM RootFolders
+
+                UNION ALL
+
+                -- Recurse down the folder tree
+                SELECT f.Id
+                FROM Folders f
+                INNER JOIN RecursiveFolders rf ON f.ParentId = rf.Id
+            )
             SELECT 
-                Id
-            FROM 
-                Folders
-            WHERE 
-                ParentId = @ParentId
-            
+                fi.*, 
+                u.FullName, 
+                f.FolderName 
+            FROM Files fi
+            INNER JOIN Users u ON fi.UserId = u.Id
+            INNER JOIN Folders f ON fi.FolderId = f.Id
+            WHERE fi.FolderId IN (
+                SELECT Id FROM RecursiveFolders
+            );";
+         }
+            else if (type == "compseqr360")
+            {
+                query = @"
+        ;WITH RootFolders AS (
+            SELECT Id
+            FROM Folders
+            WHERE  module_type != 'Dms'
+              
+        ),
+        RecursiveFolders AS (
+            SELECT Id FROM RootFolders
             UNION ALL
-            
-            SELECT 
-                f.Id
-            FROM 
-                Folders f
-            INNER JOIN 
-                RecursiveFolders rf 
-            ON 
-                f.ParentId = rf.Id
+            SELECT f.Id
+            FROM Folders f
+            INNER JOIN RecursiveFolders rf ON f.ParentId = rf.Id
         )
-        SELECT fi.*,u.FullName,f.FolderName 
+        SELECT 
+            fi.*, 
+            u.FullName, 
+            f.FolderName 
         FROM Files fi
         INNER JOIN Users u ON fi.UserId = u.Id
         INNER JOIN Folders f ON fi.FolderId = f.Id
-        WHERE FolderId IN (
-            SELECT Id FROM RecursiveFolders
-            UNION
-            SELECT @ParentId -- Include the root folder itself
-        );
-    ";
+        WHERE fi.FolderId IN (SELECT Id FROM RecursiveFolders);";
 
-                // Use QueryMultipleAsync with the parameter
-                using (var mul = await connection.QueryMultipleAsync(query, new { ParentId = folderId }))
-                {
-                    // Read the results into a list of FileDetail
-                    var result = mul.Read<FileDetail>().ToList();
-                    return result;
-                }
             }
+            else
+            {
+                query = @"
+        ;WITH RootFolders AS (
+            SELECT Id
+            FROM Folders
+            WHERE (Id = @ParentId OR EntityId = @ParentId)
+              AND module_type = @type
+        ),
+        RecursiveFolders AS (
+            SELECT Id FROM RootFolders
+            UNION ALL
+            SELECT f.Id
+            FROM Folders f
+            INNER JOIN RecursiveFolders rf ON f.ParentId = rf.Id
+        )
+        SELECT 
+            fi.*, 
+            u.FullName, 
+            f.FolderName 
+        FROM Files fi
+        INNER JOIN Users u ON fi.UserId = u.Id
+        INNER JOIN Folders f ON fi.FolderId = f.Id
+        WHERE fi.FolderId IN (SELECT Id FROM RecursiveFolders);";
+            }
+            
+
+            var result = await connection.QueryAsync<FileDetail>(
+                query,
+                new { ParentId = folderId, type }
+            );
+
+            return result.ToList();
         }
 
 

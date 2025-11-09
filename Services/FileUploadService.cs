@@ -5,7 +5,7 @@ namespace ComplianceAPI.Services
 {
     public interface IFileUploadService
     {
-        Task<List<FileDetail>> GetFilesbyFolder(int folderId);
+        Task<List<FileDetail>> GetFilesbyFolder(int folderId,string type);
         Task<bool> DeleteFile( int fileId);
         Task<bool> SaveFileDetails(FileDetail file);
     }
@@ -21,9 +21,9 @@ namespace ComplianceAPI.Services
         {
             return await _fileUploadRepository.SaveFileDetails(file);
         }
-        public async Task<List<FileDetail>> GetFilesbyFolder(int folderId)
+        public async Task<List<FileDetail>> GetFilesbyFolder(int folderId, string type)
         {
-            return await _fileUploadRepository.GetFilesListbyFolder(folderId);
+            return await _fileUploadRepository.GetFilesListbyFolder(folderId,type);
 
         }
         public async Task<bool> DeleteFile( int fileId)

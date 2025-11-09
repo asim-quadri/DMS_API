@@ -108,11 +108,11 @@ namespace ComplianceAPI.Controllers
         }
 
         [HttpGet("getFiles")]
-        public async Task<ActionResult> GetFilesbyFolder(int folderId)
+        public async Task<ActionResult> GetFilesbyFolder(int folderId,string mtype)
         {
             try
             {
-                var files = await _fileService.GetFilesbyFolder(folderId);
+                var files = await _fileService.GetFilesbyFolder(folderId, mtype);
                 if (files != null && files.Count > 0)
                     return Ok(files);
                 return NotFound();

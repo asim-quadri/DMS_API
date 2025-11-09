@@ -3199,6 +3199,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "mtype",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

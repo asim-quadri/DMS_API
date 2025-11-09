@@ -1910,6 +1910,11 @@
         "Name": "folderId",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "mtype",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

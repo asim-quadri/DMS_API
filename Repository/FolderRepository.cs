@@ -78,8 +78,14 @@ namespace ComplianceAPI.Repository
         }
         public async Task<List<FolderTreeNode>> GetFolderTreeAsync(int entityId, int userId, string type)
         {
-            var query = "SELECT * FROM Folders where module_type=@mtype";
-
+            var query = "";
+            if (type == "compseqr360")
+            {
+                query = "SELECT * FROM Folders where module_type <> 'Dms'";
+            }
+            else {
+             query="SELECT * FROM Folders where module_type=@mtype";
+            }
             using (var connection = _unitOfWork.ConnectionFactory())
             {
                 var folders = await connection.QueryAsync<Folder>(query, new {mtype=type});
