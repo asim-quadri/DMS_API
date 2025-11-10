@@ -132,7 +132,7 @@ namespace ComplianceAPI.Repository
             SELECT Id
             FROM Folders
             WHERE (Id = @ParentId OR EntityId = @ParentId)
-              AND module_type = @type
+              OR module_type = @type
         ),
         RecursiveFolders AS (
             SELECT Id FROM RootFolders

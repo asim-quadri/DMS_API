@@ -1,32 +1,28 @@
 {
   "Files": [
     {
-      "Id": "E:\\DMS_API\\wwwroot\\UploadedFiles\\4842869621.pdf",
+      "Id": "D:\\babu\\DMS_API\\wwwroot\\UploadedFiles\\4842869621.pdf",
       "PackagePath": "staticwebassets\\UploadedFiles\\4842869621.pdf"
     },
     {
-      "Id": "E:\\DMS_API\\wwwroot\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx",
+      "Id": "D:\\babu\\DMS_API\\wwwroot\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx",
       "PackagePath": "staticwebassets\\UploadedFiles\\All_Candidates_Report_export_1761821355001.xlsx"
     },
     {
-      "Id": "E:\\DMS_API\\wwwroot\\UploadedFiles\\file-sample_100kB.doc",
+      "Id": "D:\\babu\\DMS_API\\wwwroot\\UploadedFiles\\file-sample_100kB.doc",
       "PackagePath": "staticwebassets\\UploadedFiles\\file-sample_100kB.doc"
     },
     {
-      "Id": "E:\\DMS_API\\wwwroot\\UploadedFiles\\login.jpg",
+      "Id": "D:\\babu\\DMS_API\\wwwroot\\UploadedFiles\\login.jpg",
       "PackagePath": "staticwebassets\\UploadedFiles\\login.jpg"
     },
     {
-      "Id": "E:\\DMS_API\\wwwroot\\UploadedFiles\\quotexprompt.txt",
+      "Id": "D:\\babu\\DMS_API\\wwwroot\\UploadedFiles\\quotexprompt.txt",
       "PackagePath": "staticwebassets\\UploadedFiles\\quotexprompt.txt"
     },
     {
-      "Id": "E:\\DMS_API\\wwwroot\\UploadedFiles\\sample.pdf",
+      "Id": "D:\\babu\\DMS_API\\wwwroot\\UploadedFiles\\sample.pdf",
       "PackagePath": "staticwebassets\\UploadedFiles\\sample.pdf"
-    },
-    {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ComplianceAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ComplianceAPI.Microsoft.AspNetCore.StaticWebAssets.props",
